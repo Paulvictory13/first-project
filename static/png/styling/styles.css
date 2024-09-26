@@ -1,0 +1,157 @@
+/** ------------------------------     LOGIN LANDING PAGE CSS  --------------------------------------- */
+
+.container{
+        padding: 50px;
+    }
+.form{
+    width: 450px;
+    height: 500px;
+    background-color: gainsboro;
+    border: 2px solid red;
+}
+input{
+    border: 2px solid red;
+    margin-left: 100px;
+}
+
+
+.floating-form {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.floating-form form {
+  display: flex;
+  flex-direction: column;
+}
+
+.floating-form input, .floating-form textarea {
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.floating-form button {
+  background-color: #4CAF50;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.floating-form button:hover {
+  background-color: #3e8e41;
+}
+
+
+
+/** ------------------------------     NAVBAR PAGE CSS  --------------------------------------- */
+
+
+body{
+    background-color:grey gainsboro; 
+}
+.bg{
+    background-color: red;
+    color: blue;
+}
+nav{
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0; 
+    padding: 20px 8px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: black;
+    height: 30px;
+    z-index: +1;
+    border: 2px solid lime;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 50px;
+    
+}
+nav .logo{
+    width: 60px;
+    height: 60px;
+    margin-top: -0px;
+    border-radius: 7px;
+    border-top-right-radius: 20px;
+
+}
+nav ul{
+    width: 100%;  
+    position:absolute; 
+    margin-left: 400px;         
+}
+nav ul li{
+    list-style: none;
+    display: inline-block;
+    margin-left: 40px;        
+
+}
+nav ul li a{
+    text-decoration: none;
+    color: black;
+    font-size: 14px;
+    color: white;
+}
+.signup{
+    background-color: white;
+    color: red;
+    margin-left: 50px;
+    border: 2px solid red;
+
+
+}
+.signin{
+    margin-left: 25px;
+    color: white;
+    border: 3px solid lime;
+}
+.signin, .signup{
+    border-radius: 5px;
+    padding: 5px;
+}
+.signin a, .signup a{
+    text-decoration: none;
+    color: black;
+    text-size-adjust: 20px;
+
+}
+@media (max-width:1115px) {
+    nav ul{
+        margin-left: 180px;
+    }
+}
+@media (max-width:1098px) {
+nav ul li{
+    margin-left: 20px;
+}
+
+} 
+.container{
+    padding: 50px;
+}
+
+
+/*----------------------------BACKGROUND----------------------------------------------------------*/
+
+.background_video{
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        overflow:hidden;
+        z-index: -1;
+        object-fit: cover;
+    }

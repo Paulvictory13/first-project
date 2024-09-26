@@ -1,0 +1,40 @@
+ <!DOCTYPE html>
+ {% load static %}
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="{% static 'png/styling/styles.css' %}">
+ </head>
+ <style>
+    
+ </style>
+ <body>
+<div class="container">
+
+
+    <nav>
+        <a href="{% url 'home' %}"><img src="{% static 'png/pv-logo.jpg' %}" class="logo"alt="">
+            </a>
+            <ul>
+                <li><a href="{% url 'home' %}">HOME</a></li>
+                <li><a href="{% url 'trade4me' %}">TRADE-4-ME</a></li>
+                <li><a href="">ABOUT-US</a></li>
+                <li><a href="">CONTACT US</a></li>
+                <li><a href="">OPEN TRADING ACCOUNT</a></li>
+                
+                <button class="signin"><a href="{% url 'logout' %}">LogOut</a></button>
+                
+
+            </ul>
+    </nav>
+
+
+{% block content %}
+
+{% endblock %}
+
+ </body>
+ </html>

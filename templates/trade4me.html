@@ -1,0 +1,75 @@
+{% extends 'navbar.html' %}
+{% block content %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trade4me</title>
+</head>
+<style>
+    body{
+        background-image: url(/static/png/fx-us-platform-overview-mobile.png);
+        background-size: cover;
+    }
+    .trade4meform{
+        background-color: gainsboro;
+        width: 400px;
+        padding: 10px;
+        margin-top: 50px;
+        margin-left: 400px;
+        border-radius: 5px;
+        border: 3px solid lime;
+        
+    }
+    
+</style>
+<body>
+
+
+
+    <div class="trade4meform">
+        <form method="POST" action="{% url 'trade4me' %}">
+          {% csrf_token %}
+          <center><h4>Fill the correct details to enable us access your trading platform</h4></center>
+          <div style="margin-left: 20px;">
+                <label for="full_name">Full Name:</label><br>
+                <input type="text" required name="full_name"><br> <hr>
+
+                <label for="email">Email:</label><br>
+                <input type="text" required name="email"> <br><hr>
+
+                <label for="login_id">Login ID</label> <br>
+                <input type="text" required name="login_ID"> <br><hr>
+
+                <label for="pass">Password</label> <br>
+                <input type="text" required name="password"> <br><hr>
+                <center><button>Submit</button></center>
+
+          </div>
+            </form>
+    </div>
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+</body>
+</html>
+{% endblock %}

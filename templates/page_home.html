@@ -1,0 +1,175 @@
+{% extends 'navbar.html' %}
+{% block content %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PavicForex</title>
+    <link rel="stylesheet" href="{% static 'png/styling/styles.css' %}">
+</head>
+<style>
+    .background_video{
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        overflow:hidden;
+        z-index: -100;
+        object-fit: cover;
+    }
+    .cont{
+        margin-top: 50px;
+        
+    }
+.mid1{
+    background-image: radial-gradient(lime,white);
+    width: 100%;
+    left: 0%;
+    margin-top: 600px;
+    height: 500px;
+    position: absolute;
+    z-index: -10;
+}
+.mid2{
+    position:sticky;
+}
+.mid3{
+    background-image: linear-gradient(lime,black);
+    width: 100%;
+    left: 0%;
+    margin-top: 1600px;
+    height: 300px;
+    position: absolute;
+}
+
+.frame{
+    position: absolute;
+    width: 500px;
+    margin-left: 700px;
+
+
+}
+.frame-top{
+    width: 354px;
+    position: absolute;
+    margin-top: 33px;
+    margin-left: 770px;
+    z-index: -1;
+
+}
+.background_video2{
+    width: 330px;
+    position: absolute;
+    margin-top: 280px;
+    margin-left: 780px;
+    z-index: -1;
+}
+.frame, .background_video2{
+    position:absolute;
+}
+.phone-contents{
+    background-color: gainsboro;
+    border-bottom: 40px;
+    width: 330px;
+    height: 660px;
+    position: absolute;
+    margin-top: 80px;
+    margin-left: 780px;
+    z-index: -2;
+}
+.low{
+    background-color: lime;
+    width: 330px;
+    height: 25px;
+    position: absolute;
+    margin-top: 631px;
+    
+}
+h3{
+    position: absolute;
+    padding: 70px;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.training-signup{
+    position: absolute;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background-color:white;
+    border: 3px solid red;
+    border-radius: 5px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    position: absolute;
+    margin-top: 500px;
+    margin-left: 270px;
+    width: 100px;
+    height: 30px;
+}
+.desktop{
+    width: 600px;
+    position: absolute;
+    filter: brightness(50%);
+    left: 0%;
+    margin-top: 1350px;
+}
+
+</style>
+<body>
+
+<div class="mid1">
+    
+</div>
+<img class="mid2" src="/static/png/platform_mt4.pn" alt="">
+<br><br><br>
+<h1 class="mid3"></h1>
+
+<img class="desktop" src="/static/png/platform_mt4.png" alt="">
+
+
+
+
+
+
+
+<div class="phone">
+    <img class="frame-top" src="/static/png/fx frame.png" alt="">
+    <img class="frame" src="/static/png/iphone_frame-removebg-preview.png" alt="">
+    <video autoplay muted loop class="background_video2">
+        <source src="/static/png/financial-advisor-presenting-financial-strategies-to-customers-recommending-st-SBV-349125100-preview.mp4" type="video/mp4">
+    </video>
+    <div class="phone-contents">
+        <center><h3>APPLY FOR PHYSICAL <br> TRAINING</h3></center>
+        <h6 class="low"></h6>
+    </div>
+       <center><button class="training-signup"><a href="{% url 'training' %}">SignUp</a></button></center>
+
+
+</div>
+
+
+
+
+<div class="down-info">
+    
+</div>
+  
+<div class="background_video">
+    <video autoplay muted loop id="background_video">
+        <source src="/static/png/Untitled design.mp4" type="video/mp4">
+    </video>
+
+
+
+
+
+
+
+    {% if messages %}
+    <p>{{ messages }}</p>
+    {%  endif %}
+</div>
+</body>
+</html>
+{% endblock %}

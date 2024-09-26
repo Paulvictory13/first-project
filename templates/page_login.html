@@ -1,0 +1,48 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'png/styling/styles.css' %}">
+
+</head>
+<body>
+    {% if messages %}
+        {% for message in messages %}
+            {% if messages.tags == 'error' %}
+                <center><h4 style="color: red;">{{message}}</h4></center>
+            {% else %}
+                <center><h4 style="color: blue;">{{message}}</h4></center>
+            {% endif %}
+        {% endfor %}
+    {% endif %}
+
+    <div class="form">
+        <form method="POST">
+          {% csrf_token %}
+
+                <label for="login">Username</label> <br>
+                <input type="text" required name="username"> <br>
+
+                <label for="password">Password</label> <br>
+                <input type="password" required name="password"> <br>
+                <button>Login</button>
+            </form>
+            <div class="sign_up"> <hr>
+                Does'nt Have Account? <a href="{% url 'register' %}">Sign Up</a> <br>
+                Forget Password? <a href="{% url 'forget_password' %}">Reset Password</a>
+            </div>
+    </div>
+    
+
+
+
+
+
+
+
+</body>
+</html>
